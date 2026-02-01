@@ -1525,6 +1525,14 @@ section {
     .nav-brand {
         position: absolute;
         left: var(--space-md);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .brand-text {
+        position: static;
+        transform: none;
     }
     
     .hamburger {
@@ -1539,6 +1547,9 @@ section {
         opacity: 1;
         visibility: visible;
         transform: none;
+        height: auto;
+        width: auto;
+        padding: 0;
     }
     
     .btn-donate-nav {
@@ -1551,13 +1562,22 @@ section {
         gap: var(--space-lg);
     }
     
+    .nav-menu li {
+        width: auto;
+        border: none;
+    }
+    
     .nav-menu a {
+        font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
     }
     
     .nav-logo {
         width: 60px;
         height: 60px;
+        position: static;
     }
     
     .brand-name {
