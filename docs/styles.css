@@ -1310,6 +1310,14 @@ section {
     border-radius: var(--radius);
 }
 
+.footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
 .footer-mission {
     color: var(--accent);
     font-size: 0.9rem;
