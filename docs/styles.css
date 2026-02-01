@@ -136,9 +136,10 @@ a {
 .navbar .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: var(--space-sm) var(--space-md);
     min-height: 90px;
+    position: relative;
 }
 
 /* Logo & Brand */
@@ -191,6 +192,8 @@ a {
     z-index: 1001;
     padding: 0;
     gap: 5px;
+    position: absolute;
+    right: var(--space-md);
 }
 
 .hamburger-line {
@@ -228,12 +231,13 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-lg);
+    gap: var(--space-xl);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100%);
     transition: var(--transition-slow);
     z-index: 999;
+    padding: var(--space-xl);
 }
 
 .nav-wrapper.active {
@@ -247,17 +251,24 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu li {
+    width: 100%;
 }
 
 .nav-menu a {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: var(--text-primary);
-    padding: var(--space-xs) 0;
+    padding: var(--space-sm) 0;
     transition: var(--transition);
     position: relative;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .nav-menu a::after {
