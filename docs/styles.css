@@ -219,29 +219,32 @@ a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile Navigation Wrapper */
+/* Mobile Navigation Wrapper - Full Screen Overlay */
 .nav-wrapper {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--bg-white);
-    display: none;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 0;
     opacity: 0;
     visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
     z-index: 999;
-    padding: 100px 2rem 2rem;
+    padding: 0;
 }
 
 .nav-wrapper.active {
-    display: flex;
     opacity: 1;
     visibility: visible;
+    transform: translateX(0);
 }
 
 .nav-menu {
@@ -250,7 +253,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -258,29 +261,38 @@ a {
 
 .nav-menu li {
     width: 100%;
-    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-menu a {
-    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
-    padding: 0.75rem 1rem;
-    transition: var(--transition);
-    display: inline-block;
+    padding: 1.25rem 2rem;
+    transition: all 0.3s ease;
+    display: block;
     text-decoration: none;
+    text-align: center;
+    width: 100%;
 }
 
 .nav-menu a:hover,
-.nav-menu a.active {
+.nav-menu a:active {
     color: var(--accent);
+    background: rgba(201, 162, 39, 0.08);
 }
 
 /* Mobile donate button in menu */
 .nav-wrapper .btn-donate-nav {
-    margin-top: 1rem;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 /* Donate Button */
