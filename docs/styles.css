@@ -142,6 +142,20 @@ a {
     position: relative;
 }
 
+/* Mobile: Center brand text */
+@media (max-width: 899px) {
+    .brand-text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-logo {
+        position: relative;
+        z-index: 1;
+    }
+}
+
 /* Logo & Brand */
 .nav-brand {
     display: flex;
