@@ -316,7 +316,7 @@ a {
     align-items: center;
     justify-content: center;
     background: linear-gradient(165deg, rgba(26, 26, 46, 0.85), rgba(26, 26, 46, 0.7)),
-                url('../pictures/street.jpg') center/cover no-repeat;
+                url('pictures/street.jpg') center/cover no-repeat;
     padding: 100px var(--space-sm) var(--space-xl);
     text-align: center;
     color: var(--text-light);
